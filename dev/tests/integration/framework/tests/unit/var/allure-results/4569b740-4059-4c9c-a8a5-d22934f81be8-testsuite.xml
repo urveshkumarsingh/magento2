@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570783910108" stop="1570783910108" version="1.4.0">
+  <name>Magento\Test\Profiler\OutputBambooTest</name>
+  <test-cases>
+    <test-case start="1570783910108" stop="1570783910108" status="passed">
+      <name>testDisplay</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

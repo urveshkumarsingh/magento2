@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570783909703" stop="1570783909704" version="1.4.0">
+  <name>Magento\TestFramework\Utility\FunctionDetectorTest</name>
+  <test-cases>
+    <test-case start="1570783909703" stop="1570783909704" status="passed">
+      <name>testDetectFunctions</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

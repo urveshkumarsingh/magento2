@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570783910003" stop="1570783910007" version="1.4.0">
+  <name>Magento\Test\BootstrapTest</name>
+  <test-cases>
+    <test-case start="1570783910003" stop="1570783910005" status="passed">
+      <name>testGetApplication</name>
+    </test-case>
+    <test-case start="1570783910005" stop="1570783910006" status="passed">
+      <name>testRunBootstrap</name>
+    </test-case>
+    <test-case start="1570783910006" stop="1570783910007" status="passed">
+      <name>testRunBootstrapProfilerEnabled</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

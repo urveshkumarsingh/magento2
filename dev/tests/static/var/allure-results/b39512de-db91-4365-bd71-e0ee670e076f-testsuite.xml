@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570792699699" stop="1570792699744" version="1.4.0">
+  <name>Magento\Test\Integrity\App\Language\CircularDependencyTest</name>
+  <test-cases>
+    <test-case start="1570792699699" stop="1570792699744" status="passed">
+      <name>testCircularDependencies</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570792699160" stop="1570792699694" version="1.4.0">
+  <name>Magento\Test\Php\LiveCodeTest</name>
+  <test-cases>
+    <test-case start="1570792699160" stop="1570792699183" status="passed">
+      <name>testCodeStyle</name>
+    </test-case>
+    <test-case start="1570792699183" stop="1570792699201" status="passed">
+      <name>testCodeMess</name>
+    </test-case>
+    <test-case start="1570792699202" stop="1570792699686" status="failed">
+      <name>testCopyPaste</name>
+      <failure>
+        <message>PHP Copy/Paste Detector has found error(s):
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;pmd-cpd&gt;
+  &lt;duplication lines="77" tokens="101"&gt;
+    &lt;file path="/usr/local/var/www/magento4/app/code/Magento/TestModuleExtensionAttributes/Model/FakeAttributeMetadata.php" line="13"/&gt;
+    &lt;file path="/usr/local/var/www/magento4/app/code/Magento/TestModuleExtensionAttributes/Model/Data/FakeAttributeMetadata.php" line="13"/&gt;
+    &lt;codefragment&gt;class FakeAttributeMetadata extends \Magento\Framework\Api\AbstractSimpleObject implements
+    \Magento\TestModuleExtensionAttributes\Api\Data\FakeAttributeMetadataInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function getAttributeCode()
+    {
+        return $this-&amp;gt;_get(self::ATTRIBUTE_CODE);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getStoreLabel()
+    {
+        return $this-&amp;gt;_get(self::STORE_LABEL);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getFrontendLabel()
+    {
+        return $this-&amp;gt;_get(self::FRONTEND_LABEL);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getNote()
+    {
+        return $this-&amp;gt;_get(self::NOTE);
+    }
+
+    /**
+     * Set attribute code
+     *
+     * @param string $attributeCode
+     * @return $this
+     */
+    public function setAttributeCode($attributeCode)
+    {
+        return $this-&amp;gt;setData(self::ATTRIBUTE_CODE, $attributeCode);
+    }
+
+    /**
+     * Set label of the store.
+     *
+     * @param string $storeLabel
+     * @return $this
+     */
+    public function setStoreLabel($storeLabel)
+    {
+        return $this-&amp;gt;setData(self::STORE_LABEL, $storeLabel);
+    }
+
+    /**
+     * Set label which supposed to be displayed on frontend.
+     *
+     * @param string $frontendLabel
+     * @return $this
+     */
+    public function setFrontendLabel($frontendLabel)
+    {
+        return $this-&amp;gt;setData(self::FRONTEND_LABEL, $frontendLabel);
+    }
+
+    /**
+     * Set the note attribute for the element.
+     *
+     * @param string $note
+     * @return $this
+     */
+    public function setNote($note)
+    {
+        return $this-&amp;gt;setData(self::NOTE, $note);
+&lt;/codefragment&gt;
+  &lt;/duplication&gt;
+  &lt;duplication lines="67" tokens="197"&gt;
+    &lt;file path="/usr/local/var/www/magento4/update/app/code/Magento/Update/Queue.php" line="62"/&gt;
+    &lt;file path="/usr/local/var/www/magento4/setup/src/Magento/Setup/Model/Cron/Queue.php" line="53"/&gt;
+    &lt;codefragment&gt;    public function peek()
+    {
+        $queue = json_decode($this-&amp;gt;reader-&amp;gt;read(), true);
+        if (!is_array($queue)) {
+            return [];
+        }
+        if (isset($queue[self::KEY_JOBS]) &amp;amp;&amp;amp; is_array($queue[self::KEY_JOBS])) {
+            $this-&amp;gt;validateJobDeclaration($queue[self::KEY_JOBS][0]);
+            return $queue[self::KEY_JOBS][0];
+        } else {
+            throw new \RuntimeException(sprintf('"%s" field is missing or is not an array.', self::KEY_JOBS));
+        }
+    }
+
+    /**
+     * Pop job queue.
+     *
+     * @return AbstractJob
+     * @throws \RuntimeException
+     */
+    public function popQueuedJob()
+    {
+        $job = null;
+        $queue = json_decode($this-&amp;gt;reader-&amp;gt;read(), true);
+        if (!is_array($queue)) {
+            return $job;
+        }
+        if (isset($queue[self::KEY_JOBS]) &amp;amp;&amp;amp; is_array($queue[self::KEY_JOBS])) {
+            $this-&amp;gt;validateJobDeclaration($queue[self::KEY_JOBS][0]);
+            $job = $this-&amp;gt;jobFactory-&amp;gt;create(
+                $queue[self::KEY_JOBS][0][self::KEY_JOB_NAME],
+                $queue[self::KEY_JOBS][0][self::KEY_JOB_PARAMS]
+            );
+            array_shift($queue[self::KEY_JOBS]);
+            if (empty($queue[self::KEY_JOBS])) {
+                $this-&amp;gt;writer-&amp;gt;write('');
+            } else {
+                $this-&amp;gt;writer-&amp;gt;write(json_encode($queue, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ));
+            }
+        } else {
+            throw new \RuntimeException(sprintf('"%s" field is missing or is not an array.', self::KEY_JOBS));
+        }
+        return $job;
+    }
+
+    /**
+     * Check if queue is empty
+     *
+     * @return bool
+     */
+    public function isEmpty()
+    {
+        $queue = json_decode($this-&amp;gt;reader-&amp;gt;read(), true);
+        return empty($queue);
+    }
+
+    /**
+     * @param array $jobs
+     * @return void
+     */
+    public function addJobs(array $jobs)
+    {
+        foreach ($jobs as $job) {
+            $this-&amp;gt;validateJobDeclaration($job);
+            $queue = json_decode($this-&amp;gt;reader-&amp;gt;read(), true);
+            $queue[self::KEY_JOBS][] = $job;
+            $this-&amp;gt;writer-&amp;gt;write(json_encode($queue, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES ));
+&lt;/codefragment&gt;
+  &lt;/duplication&gt;
+&lt;/pmd-cpd&gt;
+
+Failed asserting that false is true.</message>
+        <stack-trace>#0 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/Constraint/Constraint.php(62): PHPUnit\Framework\Constraint\Constraint-&gt;fail(false, 'PHP Copy/Paste ...')
+#1 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/Assert.php(2116): PHPUnit\Framework\Constraint\Constraint-&gt;evaluate(false, 'PHP Copy/Paste ...')
+#2 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/Assert.php(1150): PHPUnit\Framework\Assert::assertThat(false, Object(PHPUnit\Framework\Constraint\IsTrue), 'PHP Copy/Paste ...')
+#3 /usr/local/var/www/magento4/dev/tests/static/testsuite/Magento/Test/Php/LiveCodeTest.php(342): PHPUnit\Framework\Assert::assertTrue(false, 'PHP Copy/Paste ...')
+#4 [internal function]: Magento\Test\Php\LiveCodeTest-&gt;testCopyPaste()
+#5 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(1071): ReflectionMethod-&gt;invokeArgs(Object(Magento\Test\Php\LiveCodeTest), Array)
+#6 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(939): PHPUnit\Framework\TestCase-&gt;runTest()
+#7 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase-&gt;runBare()
+#8 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(894): PHPUnit\Framework\TestResult-&gt;run(Object(Magento\Test\Php\LiveCodeTest))
+#9 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#10 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#11 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#12 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#13 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner-&gt;doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#14 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#15 /usr/local/var/www/magento4/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#16 {main}</stack-trace>
+      </failure>
+    </test-case>
+    <test-case start="1570792699686" stop="1570792699694" status="passed">
+      <name>testStrictTypes</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

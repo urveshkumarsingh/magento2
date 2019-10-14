@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570783909417" stop="1570783909428" version="1.4.0">
+  <name>Magento\TestFramework\Dependency\LayoutRuleTest</name>
+  <test-cases>
+    <test-case start="1570783909417" stop="1570783909418" status="passed">
+      <name>testNonLayoutGetDependencyInfo</name>
+    </test-case>
+    <test-case start="1570783909418" stop="1570783909419" status="passed">
+      <name>testGetDependencyInfo with data set #0</name>
+    </test-case>
+    <test-case start="1570783909419" stop="1570783909419" status="passed">
+      <name>testGetDependencyInfo with data set #1</name>
+    </test-case>
+    <test-case start="1570783909419" stop="1570783909420" status="passed">
+      <name>testGetDependencyInfo with data set #2</name>
+    </test-case>
+    <test-case start="1570783909420" stop="1570783909420" status="passed">
+      <name>testGetDependencyInfo with data set #3</name>
+    </test-case>
+    <test-case start="1570783909420" stop="1570783909420" status="passed">
+      <name>testGetDependencyInfo with data set #4</name>
+    </test-case>
+    <test-case start="1570783909420" stop="1570783909420" status="passed">
+      <name>testGetDependencyInfo with data set #5</name>
+    </test-case>
+    <test-case start="1570783909420" stop="1570783909421" status="passed">
+      <name>testGetDependencyInfo with data set #6</name>
+    </test-case>
+    <test-case start="1570783909421" stop="1570783909421" status="passed">
+      <name>testGetDependencyInfo with data set #7</name>
+    </test-case>
+    <test-case start="1570783909421" stop="1570783909421" status="passed">
+      <name>testGetDependencyInfo with data set #8</name>
+    </test-case>
+    <test-case start="1570783909421" stop="1570783909421" status="passed">
+      <name>testGetDependencyInfo with data set #9</name>
+    </test-case>
+    <test-case start="1570783909421" stop="1570783909422" status="passed">
+      <name>testGetDependencyInfo with data set #10</name>
+    </test-case>
+    <test-case start="1570783909422" stop="1570783909422" status="passed">
+      <name>testGetDependencyInfo with data set #11</name>
+    </test-case>
+    <test-case start="1570783909422" stop="1570783909422" status="passed">
+      <name>testGetDependencyInfo with data set #12</name>
+    </test-case>
+    <test-case start="1570783909422" stop="1570783909422" status="passed">
+      <name>testGetDependencyInfo with data set #13</name>
+    </test-case>
+    <test-case start="1570783909422" stop="1570783909423" status="passed">
+      <name>testUpdatesRouterGetDependencyInfo with data set #0</name>
+    </test-case>
+    <test-case start="1570783909423" stop="1570783909423" status="passed">
+      <name>testUpdatesRouterGetDependencyInfo with data set #1</name>
+    </test-case>
+    <test-case start="1570783909423" stop="1570783909424" status="passed">
+      <name>testUpdatesRouterGetDependencyInfo with data set #2</name>
+    </test-case>
+    <test-case start="1570783909424" stop="1570783909425" status="passed">
+      <name>testLayoutGetDependencyInfo with data set #0</name>
+    </test-case>
+    <test-case start="1570783909425" stop="1570783909426" status="passed">
+      <name>testLayoutGetDependencyInfo with data set #1</name>
+    </test-case>
+    <test-case start="1570783909426" stop="1570783909427" status="passed">
+      <name>testLayoutGetDependencyInfo with data set #2</name>
+    </test-case>
+    <test-case start="1570783909427" stop="1570783909428" status="passed">
+      <name>testLayoutGetDependencyInfo with data set #3</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

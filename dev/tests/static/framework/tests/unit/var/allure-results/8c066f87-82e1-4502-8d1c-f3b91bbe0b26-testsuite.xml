@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570783909409" stop="1570783909414" version="1.4.0">
+  <name>Magento\TestFramework\Dependency\DiRuleTest</name>
+  <test-cases>
+    <test-case start="1570783909409" stop="1570783909412" status="passed">
+      <name>testGetDependencyInfo with data set "Di without dependencies"</name>
+    </test-case>
+    <test-case start="1570783909412" stop="1570783909413" status="passed">
+      <name>testGetDependencyInfo with data set "Di only in module dependencies"</name>
+    </test-case>
+    <test-case start="1570783909413" stop="1570783909413" status="passed">
+      <name>testGetDependencyInfo with data set "Di external dependencies"</name>
+    </test-case>
+    <test-case start="1570783909413" stop="1570783909414" status="passed">
+      <name>testGetDependencyInfo with data set "Di virtual dependencies"</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

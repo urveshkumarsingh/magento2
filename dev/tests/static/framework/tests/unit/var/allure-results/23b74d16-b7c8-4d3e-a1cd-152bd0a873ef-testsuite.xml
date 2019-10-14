@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570783909327" stop="1570783909338" version="1.4.0">
+  <name>Magento\TestFramework\CodingStandard\Tool\CodeMessDetectorTest</name>
+  <test-cases>
+    <test-case start="1570783909329" stop="1570783909337" status="passed">
+      <name>testCanRun</name>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

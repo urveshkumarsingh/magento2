@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1570792699747" stop="1570792699756" version="1.4.0">
+  <name>Magento\Test\Integrity\App\Language\ConfigTest</name>
+  <test-cases>
+    <test-case start="1570792699747" stop="1570792699752" status="passed">
+      <name>testSchemaUsingInvalidXml</name>
+    </test-case>
+    <test-case start="1570792699752" stop="1570792699755" status="canceled">
+      <name>testXmlFiles</name>
+      <failure>
+        <message>No XML validation of files requested</message>
+        <stack-trace>#0 /usr/local/var/www/magento4/dev/tests/static/framework/Magento/TestFramework/Integrity/AbstractConfig.php(15): PHPUnit\Framework\Assert::markTestSkipped('No XML validati...')
+#1 [internal function]: Magento\TestFramework\Integrity\AbstractConfig-&gt;testXmlFiles()
+#2 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(1071): ReflectionMethod-&gt;invokeArgs(Object(Magento\Test\Integrity\App\Language\ConfigTest), Array)
+#3 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(939): PHPUnit\Framework\TestCase-&gt;runTest()
+#4 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase-&gt;runBare()
+#5 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(894): PHPUnit\Framework\TestResult-&gt;run(Object(Magento\Test\Integrity\App\Language\ConfigTest))
+#6 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#7 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#8 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#9 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#10 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner-&gt;doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#11 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#12 /usr/local/var/www/magento4/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#13 {main}</stack-trace>
+      </failure>
+    </test-case>
+    <test-case start="1570792699755" stop="1570792699756" status="passed">
+      <name>testSchemaUsingValidXml</name>
+    </test-case>
+    <test-case start="1570792699756" stop="1570792699756" status="canceled">
+      <name>testFileSchemaUsingPartialXml</name>
+      <failure>
+        <message>No Partial File</message>
+        <stack-trace>#0 /usr/local/var/www/magento4/dev/tests/static/framework/Magento/TestFramework/Integrity/AbstractConfig.php(53): PHPUnit\Framework\Assert::markTestSkipped('No Partial File')
+#1 [internal function]: Magento\TestFramework\Integrity\AbstractConfig-&gt;testFileSchemaUsingPartialXml()
+#2 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(1071): ReflectionMethod-&gt;invokeArgs(Object(Magento\Test\Integrity\App\Language\ConfigTest), Array)
+#3 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(939): PHPUnit\Framework\TestCase-&gt;runTest()
+#4 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase-&gt;runBare()
+#5 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(894): PHPUnit\Framework\TestResult-&gt;run(Object(Magento\Test\Integrity\App\Language\ConfigTest))
+#6 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#7 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#8 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#9 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#10 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner-&gt;doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#11 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#12 /usr/local/var/www/magento4/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#13 {main}</stack-trace>
+      </failure>
+    </test-case>
+    <test-case start="1570792699756" stop="1570792699756" status="canceled">
+      <name>testFileSchemaUsingInvalidXml</name>
+      <failure>
+        <message>No Partial File</message>
+        <stack-trace>#0 /usr/local/var/www/magento4/dev/tests/static/framework/Magento/TestFramework/Integrity/AbstractConfig.php(67): PHPUnit\Framework\Assert::markTestSkipped('No Partial File')
+#1 [internal function]: Magento\TestFramework\Integrity\AbstractConfig-&gt;testFileSchemaUsingInvalidXml()
+#2 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(1071): ReflectionMethod-&gt;invokeArgs(Object(Magento\Test\Integrity\App\Language\ConfigTest), Array)
+#3 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(939): PHPUnit\Framework\TestCase-&gt;runTest()
+#4 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase-&gt;runBare()
+#5 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(894): PHPUnit\Framework\TestResult-&gt;run(Object(Magento\Test\Integrity\App\Language\ConfigTest))
+#6 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#7 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#8 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#9 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#10 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner-&gt;doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#11 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#12 /usr/local/var/www/magento4/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#13 {main}</stack-trace>
+      </failure>
+    </test-case>
+    <test-case start="1570792699756" stop="1570792699756" status="canceled">
+      <name>testSchemaUsingPartialXml</name>
+      <failure>
+        <message>No Partial File</message>
+        <stack-trace>#0 /usr/local/var/www/magento4/dev/tests/static/framework/Magento/TestFramework/Integrity/AbstractConfig.php(81): PHPUnit\Framework\Assert::markTestSkipped('No Partial File')
+#1 [internal function]: Magento\TestFramework\Integrity\AbstractConfig-&gt;testSchemaUsingPartialXml()
+#2 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(1071): ReflectionMethod-&gt;invokeArgs(Object(Magento\Test\Integrity\App\Language\ConfigTest), Array)
+#3 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(939): PHPUnit\Framework\TestCase-&gt;runTest()
+#4 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestResult.php(698): PHPUnit\Framework\TestCase-&gt;runBare()
+#5 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestCase.php(894): PHPUnit\Framework\TestResult-&gt;run(Object(Magento\Test\Integrity\App\Language\ConfigTest))
+#6 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestCase-&gt;run(Object(PHPUnit\Framework\TestResult))
+#7 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#8 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/Framework/TestSuite.php(755): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#9 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(545): PHPUnit\Framework\TestSuite-&gt;run(Object(PHPUnit\Framework\TestResult))
+#10 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(195): PHPUnit\TextUI\TestRunner-&gt;doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#11 /usr/local/var/www/magento4/vendor/phpunit/phpunit/src/TextUI/Command.php(148): PHPUnit\TextUI\Command-&gt;run(Array, true)
+#12 /usr/local/var/www/magento4/vendor/phpunit/phpunit/phpunit(53): PHPUnit\TextUI\Command::main()
+#13 {main}</stack-trace>
+      </failure>
+    </test-case>
+  </test-cases>
+</alr:test-suite>
